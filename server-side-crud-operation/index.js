@@ -47,6 +47,14 @@ async function run() {
         res.send(result)
     })
 
+    // get single data from database
+    app.get('/users/:id', async(req, res)=>{
+        const id = req.params.id
+        const query = {_id : new ObjectId(id)}
+        const result = await usersCollection.findOne(query)
+        res.send(result)
+    })
+
     // delete data from database
     app.delete('/users/:id', async(req, res)=>{
         // console.log(req.params.id)
