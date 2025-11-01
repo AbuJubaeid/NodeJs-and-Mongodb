@@ -8,6 +8,8 @@ const UserDetails = () => {
     return (
         <div>
             <h3>User Details</h3>
+            <p>id: "{user._id}"</p>
+            <p>Name: {user.name} & Email: {user.email}</p>
         </div>
     );
 };
